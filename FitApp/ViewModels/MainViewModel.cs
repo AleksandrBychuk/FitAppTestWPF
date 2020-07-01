@@ -73,8 +73,10 @@ namespace FitApp.ViewModels
                           SaveFileDialog saveFileDialog = new SaveFileDialog();
                           saveFileDialog.Filter = "Text file (*.json)|*.json";
                           if (saveFileDialog.ShowDialog() == true)
+                          {
                               File.WriteAllText(saveFileDialog.FileName, json);
-                          MessageBox.Show("Данные пользователя успешно экспортированы!");
+                              MessageBox.Show("Данные пользователя успешно экспортированы!");
+                          }
                       }
                   },
                  (obj) => SelectedPerson != null));
@@ -86,36 +88,36 @@ namespace FitApp.ViewModels
             List<Person> list = new List<Person>();
             string[] files = new string[]
             {
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day1.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day2.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day3.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day4.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day5.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day6.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day7.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day8.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day9.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day10.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day11.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day12.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day13.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day14.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day15.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day16.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day17.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day18.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day19.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day20.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day21.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day22.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day23.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day24.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day25.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day26.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day27.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day28.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day29.json",
-                "C:/Users/Family/source/repos/FitApp/FitApp/Data/day30.json"
+               "Data/day1.json",
+               "Data/day2.json",
+               "Data/day3.json",
+               "Data/day4.json",
+               "Data/day5.json",
+               "Data/day6.json",
+               "Data/day7.json",
+               "Data/day8.json",
+               "Data/day9.json",
+               "Data/day10.json",
+               "Data/day11.json",
+               "Data/day12.json",
+               "Data/day13.json",
+               "Data/day14.json",
+               "Data/day15.json",
+               "Data/day16.json",
+               "Data/day17.json",
+               "Data/day18.json",
+               "Data/day19.json",
+               "Data/day20.json",
+               "Data/day21.json",
+               "Data/day22.json",
+               "Data/day23.json",
+               "Data/day24.json",
+               "Data/day25.json",
+               "Data/day26.json",
+               "Data/day27.json",
+               "Data/day28.json",
+               "Data/day29.json",
+               "Data/day30.json"
             };
             foreach (string file in files)
             {
